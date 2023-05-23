@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+* :before,
+* :after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+.msg {
+    border: 2px solid:#ffa908;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    min-width: 800px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 30px 0;
+    background-color: #333;
+}
+
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+.nav_link {
+    color: #fff;
+    text-decoration: none;
+    transition: color .1s linear;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: 1px;
+    margin: 0 20px;
+}
+
+.nav_link:after {
+    content: "";
+    display: block;
+    opacity: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: opacity .1s linear;
+}
+
+.nav_link:hover {
+    color: #48c8ff;
+}
+
+.nav_link:hover:after {
+    opacity: 1;
+    background-color: #48c8ff;
+}
+
+.section {
+    padding: 40px 0 10px 0;
+}
+
+.section_header {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.section_title {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: rgb(41, 33, 73); 
+}
+
+.section_title:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: rgb(41, 33, 73); 
+    margin: 30px auto 10px auto;
+}
+
+.form {
+    position: relative;
+    height: max-content;
+    background: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form label {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.form input {
+    width: 550px;
+    padding: 20px;
+    border: none;
+    background: #f1f1f1;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.form p {
+    font-size: 28px;
+    color: rgb(41, 33, 73); 
+    margin: 30px 0;
+}
+
+.register_btn {
+    margin: 30px auto 100px auto;
+    border: none;
+    width: 250px;
+    height: 50px;
+    align-self: center;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #333;
+}
+
+.register_btn:hover {
+    color: rgb(49, 57, 128);
+    background: #8cc9f1;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+.nav_link.cont:after {
+    background-color: #277292;
+}
+
+.nav_link.cont:hover {
+    color: #277292;
+}
+/* Адаптивность для различных устройств */
+
+@media (max-width: 1200px) {
+    .header {
+        padding: 20px 0;
+    }
+
+    .nav_link {
+        margin: 0 10px;
+    }
+
+    .section_header {
+        margin-top: 40px;
+    }
+
+    .form input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        font-size: 14px;
+    }
+
+    .nav_link {
+        margin: 0 5px;
+    }
+
+    .section_title {
+        font-size: 24px;
+    }
+
+    .form input {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .register_btn {
+        width: 200px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        display: none;
+    }
+
+    .nav_link {
+        display: none;
+    }
+
+    .header_inner {
+        justify-content: center;
+    }
+
+    .section_header {
+        margin-top: 30px;
+    }
+
+    .section_title {
+        font-size: 20px;
+    }
+
+    .form input {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .form p {
+        font-size: 24px;
+    }
+
+    .register_btn {
+        width: 180px;
+        height: 36px;
+        font-size: 16px;
+    }
+}
